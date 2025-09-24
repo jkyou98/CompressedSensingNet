@@ -1,7 +1,12 @@
 # Compressed Sensing Net (PyTorch)
 
-This project implements a **Compressed Sensing Network (CSNet)** using **PyTorch**.  
+This project implements a **Compressed Sensing Network (CSNet)** using **PyTorch**. 
+The focus is on **compressed sensing for efficient image reconstruction**, a topic relevant to signal processing and machine learning research.
+It demonstrates my ability to design and implement deep learning models, manage training pipelines, and visualize results.  
+> **Note**: This project was independently implemented by me as part of my deep learning research practice.  
+
 By running `main.py`, the workflow automatically performs **data augmentation, training, testing, and result generation**.
+
 
 ---
 
