@@ -12,5 +12,16 @@
             "program": "${file}",
             "console": "integratedTerminal"
         }
+    ],
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Main File",
+            "type": "debugpy",
+            "request": "launch",
+            "python": ".venv/bin/python",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal"
+        }
     ]
 }

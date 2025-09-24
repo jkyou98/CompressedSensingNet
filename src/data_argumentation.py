@@ -75,11 +75,11 @@ def resize_images(image_hash, dim):
 
 
 def save_images(path, image_hash):
-    path = Path(path)                 # 確保是 Path 物件
+    path = Path(path)                 
     path.mkdir(parents=True, exist_ok=True)
 
     for k, v in image_hash.items():
-        save_path = path / k          # 自動拼接，不會漏斜線
+        save_path = path / k          
         v.save(save_path)
         print(f"Image {k} saved at {save_path}")
 
@@ -91,7 +91,6 @@ def run_data_augmentation(source_dest_pairs,
     ensure_dirs=True,
 ):
     if angles is None:
-        # 等分 0~360，去掉 360 避免重複
         angle_list = np.linspace(0, 360, num_angles, endpoint=False)
     else:
         angle_list = np.array(angles, dtype=float)
