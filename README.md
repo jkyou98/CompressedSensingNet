@@ -17,9 +17,8 @@ This framework introduces a **multi-task learning (MTL)** approach where multipl
 
 The overall loss is defined as:
 
-\[
-\mathscr{L}_{total} = \sum_{i=1}^{k} \mu_i \mathscr{L}_{i}(x, y)
-\]
+$$\mathscr{L}_{total} = \sum_{i=1}^{k} \mu_i \mathscr{L}_{i}(x, y)$$
+
 
 - $\mathscr{L}_{i}(x, y)$ : loss of the *i-th* task  
 - $\mu_i$ : adaptive weight of the *i-th* task  
@@ -27,9 +26,7 @@ The overall loss is defined as:
 
 Weights are constrained as:
 
-\[
-\sum_{i=1}^{k} \mu_i = 1
-\]
+$$\sum_{i=1}^{k} \mu_i = 1$$
 
 ---
 
@@ -38,9 +35,7 @@ Weights are constrained as:
 To prevent one task from dominating, **fuzzy logic** is applied to adjust $\mu_i$ dynamically.  
 The optimization problem is expressed using the Lagrangian:
 
-\[
-\mathscr{J}(\mu_i,\lambda) = \sum_{i=1}^k \mu_i^m \mathscr{L}_i - \lambda\left(\sum_{i=1}^k \mu_i - 1\right)
-\]
+$$\mathscr{J}(\mu_i,\lambda) = \sum_{i=1}^k \mu_i^m \mathscr{L}_i - \lambda\left(\sum_{i=1}^k \mu_i - 1\right)$$
 
 - $\lambda$: Lagrange multiplier  
 - $m$: fuzzy weighting exponent  
@@ -51,9 +46,7 @@ The optimization problem is expressed using the Lagrangian:
 
 By solving the optimization, task weights are obtained as:
 
-\[
-\mu_i = \frac{1}{\sum_{l=1}^k \left(\frac{\mathscr{L}_i}{\mathscr{L}_l}\right)^{\frac{1}{m-1}}}
-\]
+$$\mu_i = \frac{1}{\sum_{l=1}^k \left(\frac{\mathscr{L}_i}{\mathscr{L}_l}\right)^{\frac{1}{m-1}}}$$
 
 This shows that:  
 - Tasks with **higher losses** receive **smaller weights**.  
