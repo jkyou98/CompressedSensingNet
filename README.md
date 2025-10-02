@@ -13,7 +13,7 @@ This framework introduces a **multi-task learning (MTL)** approach where multipl
 
 ---
 
-## 📘 Composite Loss Function
+## Composite Loss Function
 
 The overall loss is defined as:
 
@@ -30,7 +30,7 @@ $$\sum_{i=1}^{k} \mu_i = 1$$
 
 ---
 
-## ⚖️ Fuzzy Logic Weighting
+## Fuzzy Logic Weighting
 
 To prevent one task from dominating, **fuzzy logic** is applied to adjust $\mu_i$ dynamically.  
 The optimization problem is expressed using the Lagrangian:
@@ -42,7 +42,7 @@ $$\mathscr{J}(\mu_i,\lambda) = \sum_{i=1}^k \mu_i^m \mathscr{L}_i - \lambda\left
 
 ---
 
-## 🔑 Final Weight Update Rule
+## Final Weight Update Rule
 
 By solving the optimization, task weights are obtained as:
 
@@ -54,12 +54,12 @@ This shows that:
 
 ---
 
-## 🚀 Key Insight
+## Key Insight
 The fuzzy logic framework provides a **dynamic, balanced weighting scheme** that adapts to each task’s learning state, improving training stability and effectiveness.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 main.py          # Entry point (data augmentation + training + testing + results)
 model.py         # Core model definition (Compressed Sensing Net)
@@ -71,7 +71,7 @@ result/          # Output samples and evaluation results
 
 ---
 
-## 🚀 Installation
+## Installation
 
 This project uses **[uv](https://github.com/astral-sh/uv)** for Python environment management.
 
@@ -108,7 +108,7 @@ This will:
 
 ---
 
-## 📊 Results
+## Results
 
 Training loss curves:
 
@@ -125,12 +125,12 @@ Sample reconstructions (from `result/`):
 
 ---
 
-## 📚 Reference
+## Reference
 If you use this work, please reach out for further collaboration, feedback, or inquiries. Your input is highly valued and helps improve the project.
 
 ---
 
-## 🔧 Requirements
+## Requirements
 - Python 3.9+
 - PyTorch >= 1.12
 - torchvision
