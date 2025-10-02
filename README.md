@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🏃 Usage
+## Usage
 
 Simply run:
 
